@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext, useEffect } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import { RakeenContext } from "./context/ContextProvider";
+import Home from "./sections/Home";
+import Definition from "./sections/Definition";
+import MobileNavBar from "./components/MobileNavBar";
+import Values from "./sections/Values";
+import ScrollToTopIcon from "./components/ScrollToTopIcon";
+import Services from "./sections/Services";
 
-function App() {
+export default function App() {
+  const { showdorpNav, setShowdorpNav, showNav, setShowNav } =
+    useContext(RakeenContext);
+
+  const handleClick = (e) => {
+    if (e.target.id !== "rakeen") {
+      setShowdorpNav(false);
+    } else {
+      setShowdorpNav(!showdorpNav);
+    }
+
+    if (e.target.id === "toggle-icon" || e.target.closest("#toggle-icon")) {
+      setShowNav(!showNav);
+    } else if (e.target.id === "rakeen" && showNav) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className={`${showNav ? "overflow-hidden max-h-screen" : ""}`}
+      onClick={handleClick}
+    >
+      <Navbar />
+      <MobileNavBar />
+      <Home />
+      <Definition />
+      <Values />
+      <Services />
+      <ScrollToTopIcon />
     </div>
   );
 }
-
-export default App;

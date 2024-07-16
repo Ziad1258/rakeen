@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+/* Style the scrollbar track */
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+
+}
+::-webkit-scrollbar-thumb {
+    background-color: #b0795f;
+}
+html {
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navLink {
+    position: relative;
+}
+.navLink::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    color: #fff;
+    background-color: #16a34a;
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    transition: all 0.3s ease 0s;
+    z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navLink:hover::before {
+    width: 100%;
+}
+.navLink:hover {
+    color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+    @apply text-primary text-5xl font-bold text-center mb-16;
+}
+.mySection {
+    @apply min-h-screen py-12 flex flex-col  w-screen container mx-auto px-4 md:px-0
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.serviceBox:hover > div {
+    opacity: 0.9;
+    bottom: 0;
 }
