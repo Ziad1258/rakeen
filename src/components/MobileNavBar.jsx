@@ -9,15 +9,15 @@ function MobileNavBar() {
   const { showNav, showdorpNav } = useContext(RakeenContext);
   return (
     showNav && (
-      <div className="absolute left-0 right-0 top-0 bottom-0 bg-[#000000e4]   flex items-center p-5    z-[1000000]">
-        <div className="w-full   bg-[#4a2827] rounded-md shadow-lg">
+      <div className="absolute left-0 right-0 top-0 bottom-0 cursor-pointer bg-[#000000a6]   flex items-center p-5    z-[1000000]">
+        <div className="w-full sm:w-[80%] mx-auto   bg-[#4a2827] rounded-md shadow-lg">
           <ul className="flex flex-col">
             {navbarData.map((navLink, index) => {
               return (
-                <li key={index} className="px-2 py-4 border-b border-gray-500 ">
+                <li key={index} className=" border-b border-gray-500 ">
                   <a
                     href={navLink.href}
-                    className="text-gray-300 hover:text-white"
+                    className="text-gray-300 hover:text-white w-full h-full flex p-4"
                   >
                     {navLink.name}
                   </a>
@@ -27,7 +27,7 @@ function MobileNavBar() {
             <div className="relative ">
               <li
                 id="rakeen"
-                className=" text-gray-300 hover:text-white cursor-pointer    h-full   flex items-center gap-2 px-2 py-4 border-b border-gray-500  "
+                className=" text-gray-300 hover:text-white cursor-pointer    h-full   flex items-center gap-2 p-4 border-b border-gray-500  "
               >
                 ركين التنمية
                 <FaChevronDown className="   mt-1 " />
@@ -54,8 +54,8 @@ function MobileNavBar() {
               </ul>
             </div>
             {/* Whatsapp */}
-            <li className="text-gray-300 hover:text-white  h-full flex items-center text-lg  px-2 py-4 ">
-              <a href="#" className="flex gap-2">
+            <li className="text-gray-300 hover:text-white  h-full flex items-center text-lg  ">
+              <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=966509270172&text=" className="flex gap-2 w-full h-full p-4">
                 تواصل معنا
                 <IoLogoWhatsapp
                   size={24}

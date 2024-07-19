@@ -53,7 +53,50 @@ html {
     @apply min-h-screen py-12 flex flex-col  w-screen container mx-auto px-4 md:px-0
 }
 
-.serviceBox:hover > div {
+.serviceBox:hover > div , .citiesBox>div {
     opacity: 0.9;
     bottom: 0;
+}
+
+
+.extention-box {
+   
+    &:hover .spinner {
+        animation-play-state: running;
+
+    }
+}
+
+.spinner {
+ animation: spinAnimation 3s infinite ease-in-out paused backwards ;
+ 
+}
+
+
+@keyframes spinAnimation {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    
+}
+
+.logoAnimated {
+    animation: upDown 5s linear infinite ;
+
+
+}
+@keyframes upDown {
+    0% ,  100% {
+        transform: translateY(-25%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+}
+
+.copyright {
+  direction: ltr;
 }

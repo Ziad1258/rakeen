@@ -12,7 +12,7 @@ function Navbar() {
   const { showdorpNav , toggleRef } = useContext(RakeenContext);
 
   return (
-    <div className="bg-black h-[70px] relative z-10 bg-transparent ">
+    <div className="bg-black h-[70px] relative z-50 bg-transparent ">
       <div className="flex md:flex-col lg:flex-row container px-4 md:mx-0 md:items-start lg:items-center mx-auto h-full ">
         {/* Logo */}
         <img src={logo} alt="logo" className="md:max-h-full" />
@@ -62,7 +62,7 @@ function Navbar() {
           </div>
           {/* Whatsapp */}
           <li className="text-gray-300  h-full flex items-center text-lg navLink ">
-            <a href="#" className="flex gap-2">
+            <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=966509270172&text=" className="flex gap-2">
               تواصل معنا
               <IoLogoWhatsapp
                 size={24}

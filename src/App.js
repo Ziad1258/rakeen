@@ -8,7 +8,11 @@ import MobileNavBar from "./components/MobileNavBar";
 import Values from "./sections/Values";
 import ScrollToTopIcon from "./components/ScrollToTopIcon";
 import Services from "./sections/Services";
-
+import Extentions from "./sections/Extentions"
+import CountriesDev from "./sections/CountriesDev";
+import Sectors from "./sections/Sectors";
+import Assets from "./sections/Assets";
+import Footer from "./components/Footer";
 export default function App() {
   const { showdorpNav, setShowdorpNav, showNav, setShowNav } =
     useContext(RakeenContext);
@@ -40,6 +44,11 @@ export default function App() {
       <Definition />
       <Values />
       <Services />
+      <Extentions />
+      <CountriesDev />
+      <Sectors />
+      <Assets />
+      <Footer />
       <ScrollToTopIcon />
     </div>
   );

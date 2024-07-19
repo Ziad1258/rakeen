@@ -9,7 +9,7 @@ function ScrollToTopIcon() {
     return (
         <button
             aria-label="Scroll to top"
-            className="w-12 h-12 rounded-md flex justify-center items-center bg-primary text-white fixed right-5 bottom-5 cursor-pointer hover:bg-black transition-colors"
+            className=" w-12 h-12 rounded-md flex justify-center items-center bg-primary text-white fixed right-5 bottom-5 z-10 cursor-pointer hover:bg-black transition-colors"
             onClick={handleClick}
         >
             <FaArrowUp size={18} />

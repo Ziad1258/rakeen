@@ -4,7 +4,7 @@ import rakeen from "../assets/home-logo.png";
 function Home() {
   return (
     <section
-      className="absolute left-0 right-0 top-0 bottom-0 z-[1] flex  justify-center items-center "
+      className="absolute left-0 right-0 top-0 bottom-0 z-20 flex  justify-center items-center "
       id="home"
       style={{
         backgroundImage: `url(${BackgoundImage})`,
